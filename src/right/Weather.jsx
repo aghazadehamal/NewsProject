@@ -10,7 +10,7 @@ function Weather() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `http://api.openweathermap.org/data/2.5/weather?q=Baku&units=metric&appid=a97395ee487f66584d85ba8d5c72772e        `;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=Baku&units=metric&appid=a97395ee487f66584d85ba8d5c72772e        `;
 
       try {
         const response = await axios.get(url);
