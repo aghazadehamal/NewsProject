@@ -9,6 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const DisplayPost = () => {
   const { posts, setPosts } = usePostContext();
+  const [searchResults, setSearchResults] = useState([]);
 
   const fetchPosts = async () => {
     try {
@@ -26,13 +27,13 @@ const DisplayPost = () => {
   }, []);
 
   const handleSearch = (e) => {
-   const searchText=e.target.value;
+    const searchText = e.target.value;
     const filtered = posts.filter(
       (post) =>
         post.title.toLowerCase().includes(searchText.toLowerCase()) ||
         post.description.toLowerCase().includes(searchText.toLowerCase())
     );
-    setPosts(filtered)
+    setSearchResults(filtered);
   };
 
   const shareOnFacebook = (post) => {
@@ -50,31 +51,40 @@ const DisplayPost = () => {
       style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
     >
       <div
-        style={{ position: "relative" }}
-        className="flex flex-col md:flex-row justify-between items-center mt-10 mb-3"
-      >
-        <div className="relative AsterNewsInput mb-4 md:mb-0 w-full md:w-auto ">
-          <input
-            className="border p-2 rounded w-full pr-10"
-            onChange={handleSearch}
-            type="text"
-            placeholder="Search for news"
-          />
-          <BiSearch className=" absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-        </div>
+  style={{ position: "relative" }}
+  className="flex flex-col md:flex-row justify-between items-center mt-10 mb-3"
+>
+  <div className="flex-grow relative AsterNewsInput mb-4 md:mb-0 w-full md:w-auto">
+    <input
+      className="border p-2 rounded w-full pr-10"
+      onChange={handleSearch}
+      type="text"
+      placeholder="Search for news"
+    />
+    <BiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
 
-        <a
-          href="https://www.worldometers.info/coronavirus/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fi
-     mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full ml-4"
-          style={{ width: "290px" }}
-        >
-          Latest news on <span className="font-bold ml-2">Covid-19</span>
-          <AiOutlineArrowRight className="ml-2" />
-        </a>
-      </div>
+    {/* Sonuçların gösterildiği liste */}
+    <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 1 }}>
+  {searchResults.slice(0, 5).map((result, idx) => (
+    <NavLink key={idx} to={`/news/${result.slug}`} className="border p-2  bg-white block">
+      {result.title}
+    </NavLink>
+  ))}
+</div>
+  </div>
+
+  <a
+    href="https://www.worldometers.info/coronavirus/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full ml-4"
+    style={{ width: "290px" }}
+  >
+    Latest news on <span className="font-bold ml-2">Covid-19</span>
+    <AiOutlineArrowRight className="ml-2" />
+  </a>
+</div>
+
       {posts?.map((post, index) => (
         <div className="card mt-3" key={index}>
           <div className="flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">

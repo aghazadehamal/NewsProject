@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../Center/Card";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 function World() {
   const [news, setNews] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState("defaultCategory");
 
@@ -26,14 +27,11 @@ function World() {
   }, [category]);
 
   const find = (e) => {
-    console.log(news[0].author);
-    const filteredNews = news.filter((article) =>
-      article.author.fullname
-        .toLowerCase()
-        .includes(e.target.value.toLowerCase())
+    const searchText = e.target.value.toLowerCase();
+    const filteredNews = news.filter(
+      (article) => article.title.toLowerCase().includes(searchText)
     );
-    setFiltered(filteredNews);
-    console.log(filteredNews);
+    setSearchResults(filteredNews);
   };
 
   return (
@@ -42,15 +40,35 @@ function World() {
         style={{ position: "relative" }}
         className="flex flex-col md:flex-row -center mt-10"
       >
-        <div className="relative worldInput mb-4 md:mb-0 w-full md:w-auto ml-10">
-          <input
-            className=" border p-2 rounded w-full pr-10"
-            onChange={find}
-            type="text"
-            placeholder="Search for news"
-          />
-          <BiSearch className=" absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-        </div>
+         <div
+    className="relative worldInput mb-4 md:mb-0 w-full md:w-auto ml-10"
+    style={{ position: "relative" }}
+  >
+    <input
+      className="border p-2 rounded w-full pr-10"
+      onChange={find}
+      type="text"
+      placeholder="Search for news"
+    />
+    <BiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+    <div
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        zIndex: 1,
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+      {searchResults.slice(0, 5).map((result, idx) => (
+         <NavLink key={idx} to={`/news/${result.slug}`} className="border p-2  bg-white block">
+         {result.title}
+       </NavLink>
+      ))}
+    </div>
+  </div>;
 
         <a
           href="https://www.worldometers.info/coronavirus/"
