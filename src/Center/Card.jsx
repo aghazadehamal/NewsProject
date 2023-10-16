@@ -23,7 +23,7 @@ function Card({ news, navigate, index }) {
 
   return (
     <div className="card mb-6" key={index}>
-      <div className="flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
+      <div className="DisplayPostWidth flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
         <div className="flex-1 pr-5 flex flex-col">
           <h3 className="text-black text-lg md:text-xl mb-2 font-semibold overflow-hidden line-clamp-2">
             {news?.title}
@@ -39,14 +39,14 @@ function Card({ news, navigate, index }) {
           </p>
         </div>
 
-        <div className="flex-shrink-0 flex flex-col items-center ">
+        <div className="DisplayPostWidthSix flex-shrink-0 flex flex-col items-center ">
           <img
             style={{ borderRadius: "10px" }}
             src={news?.photo}
             className="w-24 h-24 md:w-28 md:h-28  shadow"
             alt="News"
           />
-          <div className="flex items-center space-x-3 text-lg mt-5">
+          <div className="flex items-center space-x-2 text-lg mt-5">
             <span
               style={{ color: "brown" }}
               className="text-lg cursor-pointer"
@@ -54,7 +54,7 @@ function Card({ news, navigate, index }) {
             >
               <GoShare />
             </span>
-            <span style={{ color: "blue" }} className="text-sm ">
+            <span style={{ color: "blue" }} className="DisplayPostWidthFour text-sm ">
               Share
             </span>
             <NavLink
@@ -64,7 +64,7 @@ function Card({ news, navigate, index }) {
             >
               <AiFillRead />
             </NavLink>
-            <span style={{ color: "blue" }} className="text-sm">
+            <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
               Read later
             </span>
           </div>

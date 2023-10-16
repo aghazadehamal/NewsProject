@@ -46,14 +46,14 @@ const DisplayPost = () => {
 
   return (
     <div
-      className="mt-2"
+      className=" mt-2"
       style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
     >
       <div
         style={{ position: "relative" }}
-        className="flex flex-col md:flex-row justify-between items-center mt-10 mb-3"
+        className=" flex flex-col md:flex-row justify-between items-center mt-10 mb-3"
       >
-        <div className="relative AsterNewsInput mb-4 md:mb-0 w-full md:w-auto ">
+        <div className=" relative AsterNewsInput mb-4 md:mb-0 w-full md:w-auto ">
           <input
             className="border p-2 rounded w-full pr-10"
             onChange={handleSearch}
@@ -67,19 +67,19 @@ const DisplayPost = () => {
           href="https://www.worldometers.info/coronavirus/"
           target="_blank"
           rel="noopener noreferrer"
-          className="fi
-     mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full ml-4"
-          style={{ width: "290px" }}
+          className="AsterNewsButton fi
+     mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full "
+         
         >
           Latest news on <span className="font-bold ml-2">Covid-19</span>
           <AiOutlineArrowRight className="ml-2" />
         </a>
       </div>
       {posts?.map((post, index) => (
-        <div className="card mt-3" key={index}>
-          <div className="flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
-            <div className="flex-1 pr-5 flex flex-col">
-              <h3 className="text-black text-lg md:text-xl mb-2 font-semibold overflow-hidden line-clamp-2">
+        <div className=" card mt-3" key={index}>
+          <div className=" DisplayPostWidth flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
+            <div className="DisplayPostWidthTwo flex-1 pr-5 flex flex-col">
+              <h3 className="text-black text-lg md:text-xl smb-2 font-semibold overflow-hidden line-clamp-2">
                 {post.title}
               </h3>
               <p className="text-sm md:text-base text-blue-800 mb-2 overflow-hidden line-clamp-2 flex-grow">
@@ -97,14 +97,14 @@ const DisplayPost = () => {
               <p>{post.body}</p>
             </div>
 
-            <div className="flex-shrink-0 flex flex-col items-center ">
+            <div className="DisplayPostWidthSix flex-shrink-0 flex flex-col items-center ">
               <img
                 style={{ borderRadius: "10px" }}
                 src={post.photo}
                 className="w-24 h-24 md:w-28 md:h-28  shadow"
                 alt="News"
               />
-              <div className="flex items-center space-x-3 text-lg mt-5">
+              <div className="DisplayPostWidthThree flex items-center space-x-2 text-lg mt-5">
                 <span
                   style={{ color: "brown" }}
                   className="text-lg cursor-pointer"
@@ -113,7 +113,7 @@ const DisplayPost = () => {
                   <GoShare />
                 </span>
 
-                <span style={{ color: "blue" }} className="text-sm ">
+                <span  style={{ color: "blue" }} className="DisplayPostWidthFour text-sm ">
                   Share
                 </span>
                 <NavLink
@@ -123,7 +123,7 @@ const DisplayPost = () => {
                 >
                   <AiFillRead />
                 </NavLink>
-                <span style={{ color: "blue" }} className="text-sm">
+                <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
                   Read later
                 </span>
               </div>

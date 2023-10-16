@@ -32,8 +32,8 @@ function Yazar() {
   }, [slug]);
 
   return (
-    <div style={{ width: "800px" }} className="mt-6 ml-20">
-      <div className="flex items-center mb-6">
+    <div style={{ width: "800px" }} className="DisplayPostMarginLeft mt-6 ml-20">
+      <div className="DisplayPostFlexTwo flex items-center mb-6">
         {authorNews?.data?.length > 0 && (
           <>
             <img
@@ -44,12 +44,12 @@ function Yazar() {
             <h3 className="text-black text-lg md:text-xl ml-4">
               {authorNews.data[0]?.author?.fullname}
             </h3>
-            <h2 className="ml-auto">Total News: {authorNews.data.length}</h2>
+            <h2 className="DisplayPostTotal ml-auto">Total News: {authorNews.data.length}</h2>
           </>
         )}
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap" }} className="gap-6">
+      <div className="DisplayPostFlex gap-6">
         {authorNews?.data?.map((news, index) => (
           <div
             className="card mb-6"
@@ -59,8 +59,8 @@ function Yazar() {
               maxWidth: "calc(50% - 1rem)",
             }}
           >
-            <div className="flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
-              <div className="flex-1 pr-5 flex flex-col">
+            <div  className="DisplayPostWidth flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
+              <div  className="flex-1 pr-5 flex flex-col">
                 <h3 className="text-black text-lg md:text-xl mb-2 font-semibold overflow-hidden line-clamp-2">
                   {news?.title}
                 </h3>
@@ -80,14 +80,14 @@ function Yazar() {
                   className="w-24 h-24 md:w-28 md:h-28 rounded shadow"
                   alt="News Thumbnail"
                 />
-                <div className="flex items-center space-x-3 text-lg mt-5">
+                <div className="DisplayPostWidthSix flex items-center space-x-2 text-lg mt-5">
                   <span
                     style={{ color: "brown" }}
                     className="text-lg cursor-pointer text-brown"
                   >
                     <GoShare />
                   </span>
-                  <span style={{ color: "blue" }} className="text-sm text-blue">
+                  <span style={{ color: "blue" }} className="DisplayPostWidthFour text-sm text-blue">
                     Share
                   </span>
                   <NavLink
@@ -97,7 +97,7 @@ function Yazar() {
                   >
                     <AiFillRead />
                   </NavLink>
-                  <span style={{ color: "blue" }} className="text-sm text-blue">
+                  <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm text-blue">
                     Read later
                   </span>
                 </div>

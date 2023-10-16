@@ -60,11 +60,15 @@ td {
   margin-left: 350px;
 }
 
-@media only screen and (max-width: 600px) {
-}
+
+
 
 .AsterNewsInput {
   width: 500px;
+}
+
+.AsterNewsButton {
+  width: 290px;
 }
 
 .AsterNewsInputCategory {
@@ -108,11 +112,57 @@ td {
 .ReadNewsImageTwo {
   margin-left: 200px;
 }
+
+.DisplayPostFlex {
+ display: flex;
+ flex-wrap: wrap;
+}
 /* responsiv dizayn burada baslayir */
 @media only screen and (max-width: 600px) {
-  .AsterNewsInput {
-    width: 320px !important;
+  .DisplayPostMarginLeft {
+    margin-left: 45px;
   }
+
+  .DisplayPostTotal {
+    margin-left: 20px;
+  }
+  
+.DisplayPostFlexTwo {
+  display: block;
+  width: 230px;
+}  
+
+  .DisplayPostWidth {
+    width: 295px;
+  }
+
+ 
+
+  .DisplayPostWidthFour {
+    font-size: 14px;
+ 
+  }
+
+  .DisplayPostWidthFive {
+    font-size: 14px;
+  
+  }
+
+  .DisplayPostWidthSix {
+    width: 138px;
+  }
+  .DisplayPostFlex {
+    display: block;
+  }
+
+  .AsterNewsInput {
+    width: 295px !important;
+  }
+
+  .AsterNewsButton {
+    width: 295px;
+  }
+
   .image-class {
     width: 50px;
     height: 50px;
@@ -124,6 +174,7 @@ td {
 
   .okay {
     width: 300px;
+    margin-left: 37px;
   }
 
   .AsterNewsInputCategory {
@@ -152,25 +203,26 @@ td {
   }
 
   .ReadNewsText {
-    width: 300px;
+    width: 295px;
+    margin-left: 37px;
   }
   .readTodoInput {
-    width: 300px;
+    width: 295px;
   }
 
   .ReadFoot {
     width: 100px;
   }
   .ReadNewsInput {
-    width: 300px;
-    margin-left: 40px;
+    width: 295px;
+    margin-left: 50px;
   }
   .ToDoListButton {
     width: 300px;
   }
 
   .ToDoListInput {
-    width: 300px;
+    width: 295px;
   }
 
   .Addyourcomment {
@@ -192,6 +244,9 @@ td {
   .worldButton {
     width: 320px;
     margin-left: 40px;
+  }
+  .readNewsh1 {
+    width: 300px;
   }
 }
 
