@@ -6,16 +6,12 @@ import ReadNews from "../readNews/ReadNews";
 import World from "../categories/World";
 import Sports from "../categories/Sports";
 import Science from "../categories/Science";
-import Politics from "../categories/politics";
+import Politics from "../categories/Politics";
 import Technology from "../categories/Technology";
 import Economy from "../categories/Economy";
 import Entertainment from "../categories/Entertainment";
 import Environment from "../categories/Environment";
 import Yazar from "../Yazar";
-
-
-
-
 
 // // import Filter from "../Filter";
 // import Okay from "../Okay";
