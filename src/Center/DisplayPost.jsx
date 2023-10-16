@@ -68,7 +68,7 @@ const DisplayPost = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="AsterNewsButton fi
-     mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full "
+     mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 ml-4 rounded flex items-center justify-center sm:w-full "
          
         >
           Latest news on <span className="font-bold ml-2">Covid-19</span>

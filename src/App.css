@@ -69,6 +69,7 @@ td {
 
 .AsterNewsButton {
   width: 290px;
+  margin-left: 0px;
 }
 
 .AsterNewsInputCategory {
@@ -195,7 +196,7 @@ td {
     margin-left: 200px;
   }
   .ReadNewsImage {
-    width: 300px;
+    width: 295px;
   }
 
   .ReadNewsImageTwo {
