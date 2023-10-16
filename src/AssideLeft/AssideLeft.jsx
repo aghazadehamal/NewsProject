@@ -50,7 +50,7 @@ function AssideLeft() {
   const Aster = [
     {
      
-      icon: <img className="inline" src="../../public/Logo.svg" alt="Logo"/>,
+      icon: <img className="inline" src="../../public/logo.svg" alt="Logo"/>,
       path: "/Aster",
       span: "Aster News",
     },
