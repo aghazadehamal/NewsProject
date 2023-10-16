@@ -82,7 +82,7 @@ function ReadNews() {
           Subscribe
         </button>
 
-        <img className="ReadNewsImageTwo inline" src="../../public/post.svg" alt="Logo" />
+        <img className="ReadNewsImageTwo inline" src="../public/post.svg" alt="Logo" />
       </div>
 
       <div
