@@ -69,7 +69,7 @@ td {
 
 .AsterNewsButton {
   width: 290px;
-  margin-left: 0px;
+ 
 }
 
 .AsterNewsInputCategory {
@@ -162,6 +162,7 @@ td {
 
   .AsterNewsButton {
     width: 295px;
+    margin-left: 0px;
   }
 
   .image-class {
