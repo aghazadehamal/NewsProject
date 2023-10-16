@@ -9,22 +9,22 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const DisplayPost = () => {
   const { posts, setPosts } = usePostContext();
-  const [filteredPosts, setFilteredPosts] = useState(posts)
+  const [filteredPosts, setFilteredPosts] = useState();
+
+  const fetchPosts = async () => {
+    try {
+      const res = await axios.get(
+        "https://all-api.bitcode.az/api/news?limit=10&page=${page}"
+      );
+      setPosts((prevPosts) => [...res.data.data, ...prevPosts]);
+    } catch (error) {
+      console.error("An error occurred while fetching the data.", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const res = await axios.get(
-          "https://all-api.bitcode.az/api/news?limit=10&page=${page}"
-        );
-        setPosts((prevPosts) => [...res.data.data, ...prevPosts]);
-      } catch (error) {
-        console.error("An error occurred while fetching the data.", error);
-      }
-    };
-
     fetchPosts();
-  }, [setPosts]);
+  }, []);
 
   const handleSearch = (e) => {
    const searchText=e.target.value;
