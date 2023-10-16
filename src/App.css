@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #072d4b;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+.mt-8.ml-10 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  flex: 1 0 calc(50% - 10px);
+}
+
+.image-class {
+  width: 120px;
+  height: 150px;
+}
+
+.okay {
+  width: 780px;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.worldInput {
+  width: 520px;
+  margin-left: 40px;
+}
+
+.worldButton {
+  width: 290px;
+  margin-left: 40px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Amal {
+  margin-left: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+.AsterNewsInput {
+  width: 500px;
+}
+
+.AsterNewsInputCategory {
+  width: 850px;
+}
+
+.YazarTotal {
+  margin-left: 560px;
+}
+
+.FollowRootsButton {
+  margin-left: 660px;
+}
+.ReadNewsText {
+  width: 800px;
+}
+.readTodoInput {
+  width: 900px;
+}
+.ReadFoot {
+  width: 900px;
+}
+
+.ReadNewsInput {
+  width: 900px;
+}
+
+.ToDoListButton {
+  width: 250px;
+}
+
+.ToDoListInput {
+  width: 900px;
+}
+.ToDoList {
+  width: 900px;
+}
+.ReadNewsImage {
+  width: 800px;
+}
+.ReadNewsImageTwo {
+  margin-left: 200px;
+}
+/* responsiv dizayn burada baslayir */
+@media only screen and (max-width: 600px) {
+  .AsterNewsInput {
+    width: 320px !important;
+  }
+  .image-class {
+    width: 50px;
+    height: 50px;
+  }
+
+  .Amal {
+    margin-left: 90px;
+  }
+
+  .okay {
+    width: 300px;
+  }
+
+  .AsterNewsInputCategory {
+    width: 320px;
+  }
+
+  .bold {
+    font-size: 15px;
+  }
+  .Latest {
+    font-size: 15px;
+  }
+
+  .YazarTotal {
+    margin-left: 30px;
+  }
+  .FollowRootsButton {
+    margin-left: 200px;
+  }
+  .ReadNewsImage {
+    width: 300px;
+  }
+
+  .ReadNewsImageTwo {
+    margin-left: 50px;
+  }
+
+  .ReadNewsText {
+    width: 300px;
+  }
+  .readTodoInput {
+    width: 300px;
+  }
+
+  .ReadFoot {
+    width: 100px;
+  }
+  .ReadNewsInput {
+    width: 300px;
+    margin-left: 40px;
+  }
+  .ToDoListButton {
+    width: 300px;
+  }
+
+  .ToDoListInput {
+    width: 300px;
+  }
+
+  .Addyourcomment {
+    width: 300px;
+  }
+
+  .ToDoList {
+    width: 300px;
+  }
+  .firstButton {
+    margin-left: 160px;
+  }
+
+  .worldInput {
+    width: 320px;
+    margin-left: 40px;
+  }
+
+  .worldButton {
+    width: 320px;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .okay {
+    width: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .okayPhoto {
+    margin-left: 20px;
+  }
+}
+
+/* responsiv dizayn burada bitir */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.readNewsh1 {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.readNewsh2 {
+  color: #2f9ff8;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 50px;
+  width: 70px;
+  text-align: center;
+
+  background-color: rgba(47, 159, 248, 0.2);
+}
+
+.readNewsh3 {
+  margin-left: 60px;
+  margin-top: 30px;
+  font-size: 11px;
+}
+
+.readNewsh4 {
+  margin-left: 60px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
