@@ -24,7 +24,7 @@ const routers = [
     
      {
         path: '/',
-        name: 'Home',
+        name: 'Login',
         element: <Login/>,
         isAdmin: true
     },
@@ -34,7 +34,7 @@ const routers = [
     {
 
         path: '/Aster',
-        name: 'Home',
+        name: 'Aster',
         element: <Container><AssideCenter/></Container>,
         isAdmin: true
     },
@@ -45,7 +45,7 @@ const routers = [
 {
 
     path: '/world',
-    name: 'Home',
+    name: 'world',
     element: <Container><World/></Container>,
     isAdmin: true
 },
@@ -69,7 +69,7 @@ const routers = [
 {
 
     path: "/health",
-    name: 'around',
+    name: 'health',
     element: <Container>< Health/></Container>,
     isAdmin: true
 },
@@ -83,21 +83,21 @@ const routers = [
 {
 
     path: '/entertainment',
-    name: 'around',
+    name: 'entertainment',
     element: <Container><Entertainment/></Container>,
     isAdmin: true
 },
 {
 
     path: '/sports',
-    name: 'around',
+    name: 'sports',
     element: <Container><Sports/></Container>,
     isAdmin: true
 },
 {
 
     path: "/culture",
-    name: 'around',
+    name: 'culture',
     element: <Container><Culture/></Container>,
     isAdmin: true
 },
@@ -111,14 +111,14 @@ const routers = [
 {
 
     path: "/environment",
-    name: 'around',
+    name: 'environment',
     element: <Container><Environment/></Container>,
     isAdmin: true
 },
 {
 
     path: "/settings",
-    name: 'around',
+    name: 'settings',
     element: <Container><div style={{width: "70%"}}>Settings</div></Container>,
     isAdmin: true
 },
@@ -141,7 +141,7 @@ const routers = [
 {
 
     path: '/news/:slug',
-    name: 'Share',
+    name: 'News',
     element: <Container><ReadNews/></Container>,
     isAdmin: true
 },
@@ -149,7 +149,7 @@ const routers = [
 {
 
     path: '/science',
-    name: 'Share',
+    name: 'science',
     element: <Container><Science/></Container>,
     isAdmin: true
 },
@@ -157,7 +157,7 @@ const routers = [
 {
 
     path: '/politics',
-    name: 'Share',
+    name: 'politics',
     element: <Container><Politics/></Container>,
     isAdmin: true
 },
@@ -165,7 +165,7 @@ const routers = [
 {
 
     path: '/technology',
-    name: 'Share',
+    name: 'technology',
     element: <Container><Technology/></Container>,
     isAdmin: true
 },
@@ -173,7 +173,7 @@ const routers = [
 {
 
     path: '/economy',
-    name: 'Share',
+    name: 'economy',
     element: <Container><Economy/></Container>,
     isAdmin: true
 },
@@ -181,7 +181,7 @@ const routers = [
 {
 
     path:"/author-news/:slug",
-    name: 'Share',
+    name: 'author',
     element: <Container><Yazar/></Container>,
     isAdmin: true
 },

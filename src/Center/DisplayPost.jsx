@@ -39,8 +39,8 @@ const DisplayPost = () => {
   );
 
   const shareOnFacebook = (post) => {
-    console.log(post);
-    const postUrl = `https://taupe-cassata-2d1c6e.netlify.app/news/${post.slug}`;
+
+    const postUrl = `https://main--joyful-rugelach-663943.netlify.app//news/${post.slug}`;
     const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
       postUrl
     )}&quote=${encodeURIComponent(post.title)}`;
