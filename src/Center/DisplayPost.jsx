@@ -9,7 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const DisplayPost = () => {
   const { posts, setPosts } = usePostContext();
-  const [searchText, setSearchText] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState(posts)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -26,17 +26,15 @@ const DisplayPost = () => {
     fetchPosts();
   }, [setPosts]);
 
-  console.log(posts);
-
   const handleSearch = (e) => {
-    setSearchText(e.target.value);
+   const searchText=e.target.value;
+    const filtered = posts.filter(
+      (post) =>
+        post.title.toLowerCase().includes(searchText.toLowerCase()) ||
+        post.description.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredPosts(filtered)
   };
-
-  const filteredPosts = posts.filter(
-    (post) =>
-      post.title.toLowerCase().includes(searchText.toLowerCase()) ||
-      post.description.toLowerCase().includes(searchText.toLowerCase())
-  );
 
   const shareOnFacebook = (post) => {
 
@@ -60,7 +58,6 @@ const DisplayPost = () => {
           <input
             className="border p-2 rounded w-full pr-10"
             onChange={handleSearch}
-            value={searchText}
             type="text"
             placeholder="Search for news"
           />
@@ -79,7 +76,7 @@ const DisplayPost = () => {
           <AiOutlineArrowRight className="ml-2" />
         </a>
       </div>
-      {filteredPosts.map((post, index) => (
+      {filteredPosts?.map((post, index) => (
         <div className="card mt-3" key={index}>
           <div className="flex p-5 bg-white w-full h-48 rounded-lg shadow-md overflow-hidden">
             <div className="flex-1 pr-5 flex flex-col">
