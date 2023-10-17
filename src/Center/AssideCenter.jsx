@@ -124,7 +124,7 @@ function AssideCenter() {
   }
   return (
     <div className="mx-2 md:mx-10 ">
-      <div className="mt-2 ml-10 ">
+      <div className="AssideCenterMarginLeft mt-2 ml-10 ">
       <div>
           <PostProvider>
             {loading ? (
@@ -145,7 +145,7 @@ function AssideCenter() {
         <RandomCenter />
       </div>
 
-      <div></div>
+    
 
       <div className="mt-10">
         <AssideCenterFooterFooter />

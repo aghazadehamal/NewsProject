@@ -42,7 +42,7 @@ function ReadNews() {
         <div className="ReadNewsImage" style={{ marginTop: "10px" }}>
           {" "}
           <img
-            style={{ marginLeft: "50px" }}
+          
             width={805}
             height={400}
             src={news?.photo}
@@ -55,7 +55,7 @@ function ReadNews() {
         style={{
           fontWeight: "200",
           fontSize: "17px",
-          marginLeft: "60px",
+          
           marginTop: "40px",
         }}
         dangerouslySetInnerHTML={{ __html: news?.content }}
@@ -66,7 +66,7 @@ function ReadNews() {
 
       <div
         className=" ToDoList"
-        style={{ marginTop: "50px", marginLeft: "35px" }}
+       
       >
         <ToDoList />
       </div>
@@ -87,7 +87,7 @@ function ReadNews() {
 
       <div
         className="ReadFoot"
-        style={{ marginTop: "40px", marginLeft: "50px" }}
+       
       >
         <ReadFoot />
       </div>

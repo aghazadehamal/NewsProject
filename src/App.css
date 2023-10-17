@@ -40,6 +40,13 @@ td {
   margin-left: 40px;
 }
 
+.readNewsh1 {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
 .fade-in {
   opacity: 0;
   animation-name: fadeIn;
@@ -85,12 +92,15 @@ td {
 }
 .ReadNewsText {
   width: 800px;
+margin-left: 60px;
 }
 .readTodoInput {
   width: 900px;
 }
 .ReadFoot {
   width: 900px;
+  margin-top: 40px;
+  margin-left: 50px;
 }
 
 .ReadNewsInput {
@@ -106,12 +116,40 @@ td {
 }
 .ToDoList {
   width: 900px;
+margin-top: 50px;
+ margin-left: 35px;
 }
 .ReadNewsImage {
   width: 800px;
+  margin-left: 50px;
 }
 .ReadNewsImageTwo {
   margin-left: 200px;
+}
+
+.readNewsh3 {
+  margin-left: 60px;
+  margin-top: 30px;
+  font-size: 11px;
+}
+
+.readNewsh4 {
+  margin-left: 60px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.readNewsh2 {
+  color: #2f9ff8;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 50px;
+  width: 70px;
+  text-align: center;
+
+  background-color: rgba(47, 159, 248, 0.2);
 }
 
 .DisplayPostFlex {
@@ -120,6 +158,16 @@ td {
 }
 /* responsiv dizayn burada baslayir */
 @media only screen and (max-width: 600px) {
+
+  .RandomCenterMarginLeft {
+    margin-left: 20px;
+  }
+
+  
+.AssideCenterMarginLeft {
+  margin-left: 15px;
+}
+
   .DisplayPostMarginLeft {
     margin-left: 45px;
   }
@@ -176,7 +224,7 @@ td {
 
   .okay {
     width: 300px;
-    margin-left: 37px;
+    margin-left: 20px;
   }
 
   .AsterNewsInputCategory {
@@ -198,15 +246,16 @@ td {
   }
   .ReadNewsImage {
     width: 295px;
+    margin-left: 35px;
   }
 
   .ReadNewsImageTwo {
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   .ReadNewsText {
     width: 295px;
-    margin-left: 37px;
+    margin-left: 35px;
   }
   .readTodoInput {
     width: 295px;
@@ -214,10 +263,11 @@ td {
 
   .ReadFoot {
     width: 100px;
+    margin-left: 25px;
   }
   .ReadNewsInput {
     width: 295px;
-    margin-left: 50px;
+    margin-left: 25px;
   }
   .ToDoListButton {
     width: 300px;
@@ -233,6 +283,7 @@ td {
 
   .ToDoList {
     width: 300px;
+    margin-left: 15px;
   }
   .firstButton {
     margin-left: 160px;
@@ -249,6 +300,19 @@ td {
   }
   .readNewsh1 {
     width: 300px;
+    margin-left: 35px;
+  }
+
+  .readNewsh3  {
+    margin-left: 35px;
+  }
+
+  .readNewsh4 {
+    margin-left: 35px;
+  }
+
+  .readNewsh2 {
+    margin-left: 35px;
   }
 }
 
@@ -271,37 +335,11 @@ td {
   align-items: center;
 }
 
-.readNewsh1 {
-  color: black;
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 50px;
-}
 
-.readNewsh2 {
-  color: #2f9ff8;
-  font-size: 15px;
-  font-weight: bold;
-  margin-left: 50px;
-  width: 70px;
-  text-align: center;
 
-  background-color: rgba(47, 159, 248, 0.2);
-}
 
-.readNewsh3 {
-  margin-left: 60px;
-  margin-top: 30px;
-  font-size: 11px;
-}
 
-.readNewsh4 {
-  margin-left: 60px;
-  margin-top: 10px;
-  font-size: 15px;
-  color: black;
-  font-weight: bold;
-}
+
 
 .cursor-pointer {
   cursor: pointer;

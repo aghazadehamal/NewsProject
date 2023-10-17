@@ -30,7 +30,7 @@ function RandomCenter() {
   };
 
   return (
-    <div style={{ gap: "10px" }} className="ml-10 flex flex-wrap mt-15">
+    <div style={{ gap: "10px" }} className=" RandomCenterMarginLeft  ml-10 flex flex-wrap mt-15">
       {news?.map((item, index) => (
         <Card key={index} news={item} index={index} />
       ))}
