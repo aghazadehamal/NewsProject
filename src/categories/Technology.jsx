@@ -40,7 +40,7 @@ function Technology()
         <div>
 
 <div style={{position: "relative"}}  className="flex flex-col md:flex-row -center mt-10">
-<div className="relative worldInput mb-4 md:mb-0 w-full md:w-auto ml-10">
+<div className="relative AsterNewsInput mb-4 md:mb-0 w-full md:w-auto ml-10">
     <input 
         className=" border p-2 rounded w-full pr-10" 
         onChange={find} 
@@ -55,7 +55,7 @@ function Technology()
     href="https://www.worldometers.info/coronavirus/" 
     target="_blank" 
     rel="noopener noreferrer"
-    className="worldButton mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full ml-14"
+    className="AsterNewsButtonTwo mt-4 md:mt-0 w-full md:w-auto bg-blue-500 text-white p-2 rounded flex items-center justify-center sm:w-full ml-14"
    
 >
     Latest news on <span className="font-bold ml-2">Covid-19</span>
