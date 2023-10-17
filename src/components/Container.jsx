@@ -23,7 +23,7 @@ function Container({ children }) {
         </button>
       </div>
 
-      {showAssideLeft && <AssideLeft className="w-1/4" />}
+      {showAssideLeft && <AssideLeft  className="w-1/4" />}
 
       <div className="w-[63%]">{children}</div>
 

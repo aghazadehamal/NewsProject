@@ -68,7 +68,9 @@ td {
 }
 
 
-
+.AsterNewsButtonTwo {
+  width: 290px;
+}
 
 .AsterNewsInput {
   width: 500px;
@@ -156,6 +158,8 @@ margin-top: 50px;
  display: flex;
  flex-wrap: wrap;
 }
+
+
 /* responsiv dizayn burada baslayir */
 @media only screen and (max-width: 600px) {
 
