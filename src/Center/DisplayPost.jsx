@@ -113,7 +113,7 @@ const DisplayPost = () => {
                   <GoShare />
                 </span>
 
-                <span  style={{ color: "blue" }} className="DisplayPostWidthFour text-sm ">
+                <span onClick={() => shareOnFacebook(post)}   style={{ color: "blue" }} className="DisplayPostWidthFour cursor-pointer text-sm ">
                   Share
                 </span>
                 <NavLink
@@ -123,9 +123,9 @@ const DisplayPost = () => {
                 >
                   <AiFillRead />
                 </NavLink>
-                <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
-                  Read later
-                </span>
+                <NavLink to={`/news/${post.slug}`} style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
+                Read later
+                </NavLink>
               </div>
             </div>
           </div>

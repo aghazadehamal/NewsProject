@@ -1,6 +1,8 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { BsSunFill } from "react-icons/bs";
 import { AiFillCloud } from "react-icons/ai";
+import { BsFillCloudRainHeavyFill } from 'react-icons/bs';
+
 
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -28,15 +30,18 @@ function Weather() {
   if (weather?.weather && weather.weather.length > 0) {
     switch (weather?.weather[0].main) {
       case "Clouds":
-        WeatherIcon = <AiFillCloud fontSize={50} color="gray" />;
-
-        break;
+          WeatherIcon = <AiFillCloud fontSize={50} color="gray" />;
+          break;
       case "Clear":
-        WeatherIcon = <BsSunFill fontSize={50} color="yellow" />;
-        break;
+          WeatherIcon = <BsSunFill fontSize={50} color="yellow" />;
+          break;
+      case "Rain":
+          WeatherIcon = <BsFillCloudRainHeavyFill fontSize={50} color="blue" />;
+          break;
       default:
-        WeatherIcon = null;
-    }
+          WeatherIcon = null;
+  }
+  
   }
 
   return (

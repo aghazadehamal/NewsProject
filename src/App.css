@@ -159,6 +159,26 @@ margin-top: 50px;
  flex-wrap: wrap;
 }
 
+.AssideCenterFooterFooterSpanOne {
+  margin-left: 10px;
+}
+
+.AssideCenterFooterFooterSpanTwo {
+  margin-left: 390px;
+}
+
+.AssideCenterFooterFooterSpanDiv {
+  width: 860px
+}
+
+.AssideCenterFooterFooterIcon {
+  margin-left: 38px;
+}
+
+.AssideCenterFooterFooterSpanThree {
+  margin-left: 50px;
+}
+
 
 /* responsiv dizayn burada baslayir */
 @media only screen and (max-width: 600px) {
@@ -323,6 +343,18 @@ margin-top: 50px;
   .readNewsh2 {
     margin-left: 35px;
   }
+
+  .AssideCenterFooterFooterSpanTwo {
+    margin-left: 40px;
+  }
+
+  .AssideCenterFooterFooterSpanDiv {
+    width: 290px
+  }
+
+  .AssideCenterFooterFooterIcon {
+    margin-left: 35px;
+  }
 }
 
 @media only screen and (min-width: 1700px) {
@@ -335,6 +367,8 @@ margin-top: 50px;
   .okayPhoto {
     margin-left: 20px;
   }
+
+ 
 }
 
 /* responsiv dizayn burada bitir */

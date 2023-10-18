@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ReadFoot from "./ReadFoot";
-import AssideCenterFooterFooter from "../Center/AssideCenterFooterFooter";
+// import AssideCenterFooterFooter from "../Center/AssideCenterFooterFooter";
 import ToDoList from "../ToDoList";
 import { padding } from "@mui/system";
 
@@ -91,9 +91,9 @@ function ReadNews() {
       >
         <ReadFoot />
       </div>
-      <div>
+      {/* <div>
         <AssideCenterFooterFooter />
-      </div>
+      </div> */}
     </div>
   );
 }
