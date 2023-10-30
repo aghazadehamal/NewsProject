@@ -1,4 +1,4 @@
-import { AiOutlineHome } from "react-icons/ai";
+import { BiWorld } from "react-icons/bi";
 import { BsSunFill } from "react-icons/bs";
 import { AiFillCloud } from "react-icons/ai";
 import { BsFillCloudRainHeavyFill } from 'react-icons/bs';
@@ -53,7 +53,7 @@ function Weather() {
         <div className="flex items-center">
           <span className="text-sm font-medium">{weather?.name}</span>
           <i className="ml-2 text-xl">
-            <AiOutlineHome />
+            <BiWorld />
           </i>
         </div>
         <div className="mt-5 flex items-center justify-between">

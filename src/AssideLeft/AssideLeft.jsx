@@ -33,6 +33,8 @@ function SkeletonLoader() {
 function AssideLeft() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
 
   const iconLists = {
     world: <FiGlobe />,
@@ -72,6 +74,11 @@ function AssideLeft() {
     }
   };
 
+  function handleCategoryClick(category) {
+    setSelectedCategory(category);
+}
+
+
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -93,12 +100,18 @@ function AssideLeft() {
             ) : (
               categories?.map((category, index) => (
                 <div key={index}>
-                  <NavLink to={`/${category.slug}`} className="block">
-                    <div className="flex items-center">
-                      <span className="text-xl text-[#072D4B] mr-2 mt-7 ml-3">{category.icon}</span>
-                      <span className="mt-7">{category.name}</span>
-                    </div>
-                  </NavLink>
+                  <NavLink to={`/${category.slug}`} className="block" onClick={() => handleCategoryClick(category)}>
+                <div className="flex items-center">
+                <span 
+    style={{marginTop: "30px"}}
+    className={`text-xl text-[#072D4B] mr-2 mt-7 ml-3 ${category.icon === selectedCategory?.icon ? 'selected' : ''}`}
+>
+    {category.icon}
+</span>
+
+                  <span style={{marginTop: "30px"}} className={category.name === selectedCategory?.name ? 'selected' : ''}>{category.name}</span>
+                </div>
+              </NavLink>
                 </div>
               ))
             )}

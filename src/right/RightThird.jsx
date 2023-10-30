@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GoBookmarkFill } from 'react-icons/go';
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
@@ -52,7 +53,7 @@ function RightThird() {
       <Slider {...sliderSettings}>
         {sliderItems?.map((item, index) => (
           <div key={index}>
-            <h2 className="mb-2 font-bold text-lg text-black">{item.title}</h2>
+            <div style={{display: "flex"}} className="mb-2 font-bold text-lg text-black"><p className="mt-1"><GoBookmarkFill/></p><p className="ml-2">{item.title}</p> </div>
             <h3 className="mb-3 text-sm text-gray-700">{item.subTitle}</h3>
             <p className="mb-4 text-xs text-gray-600">{item.description}</p>
           </div>
@@ -73,7 +74,8 @@ const CustomPrevArrow = ({ onClick, currentSlide }) => {
         transform: "translateY(-50%)",
         cursor: "pointer",
         zIndex: 2,
-        marginLeft: "150px",
+        marginLeft: "160px",
+        marginTop: "8px",
         top: "5%",
       }}
     >
@@ -97,7 +99,8 @@ const CustomNextArrow = ({ onClick, currentSlide, totalSlides }) => {
         cursor: "pointer",
         zIndex: 2,
         left: "0px",
-        marginLeft: "190px",
+        marginLeft: "200px",
+        marginTop: "8px",
       }}
     >
       <IoIosArrowDroprightCircle className="text-blue-500" size={20} />

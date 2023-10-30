@@ -4,6 +4,10 @@ import { AiFillRead } from "react-icons/ai";
 import { GoShare } from "react-icons/go";
 
 function Card({ news, navigate, index }) {
+  function formatDate(apiDate) {
+    const date = new Date(apiDate);
+    return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+  }
   function shareOnFacebook(news) {
     const url = window.location.href;
     try {
@@ -12,6 +16,9 @@ function Card({ news, navigate, index }) {
       console.error("Invalid URL:", url);
       return;
     }
+
+  
+    
 
     const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(
       url
@@ -35,8 +42,9 @@ function Card({ news, navigate, index }) {
             {news?.category?.name}
           </p>
           <p className="text-xs text-black mt-auto overflow-hidden line-clamp-1">
-            {news?.published_date}
-          </p>
+  {formatDate(news?.published_date)}
+</p>
+
         </div>
 
         <div className="DisplayPostWidthSix flex-shrink-0 flex flex-col items-center ">
@@ -54,7 +62,7 @@ function Card({ news, navigate, index }) {
             >
               <GoShare />
             </span>
-            <span style={{ color: "blue" }} className="DisplayPostWidthFour text-sm ">
+            <span  onClick={() => shareOnFacebook(news)}  style={{ color: "blue" }} className="DisplayPostWidthFour cursor-pointer text-sm ">
               Share
             </span>
             <NavLink
@@ -64,9 +72,9 @@ function Card({ news, navigate, index }) {
             >
               <AiFillRead />
             </NavLink>
-            <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
+            <NavLink to={`/news/${news.slug}`}  style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
               Read later
-            </span>
+            </NavLink>
           </div>
         </div>
       </div>

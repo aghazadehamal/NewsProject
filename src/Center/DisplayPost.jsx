@@ -9,6 +9,10 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const DisplayPost = () => {
   const { posts, setPosts } = usePostContext();
+  function formatDate(apiDate) {
+    const date = new Date(apiDate);
+    return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+  }
 
   const fetchPosts = async () => {
     try {
@@ -46,7 +50,7 @@ const DisplayPost = () => {
 
   return (
     <div
-      className=" mt-2"
+      className=" mt-2 "
       style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
     >
       <div
@@ -92,8 +96,8 @@ const DisplayPost = () => {
                 {post.name}
               </p>
               <p className="text-xs text-black mt-auto overflow-hidden line-clamp-1">
-                {post.published_date}
-              </p>
+  {formatDate(post?.published_date)}
+</p>
               <p>{post.body}</p>
             </div>
 

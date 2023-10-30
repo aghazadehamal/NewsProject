@@ -54,6 +54,22 @@ td {
   animation-fill-mode: forwards;
 }
 
+.selected {
+  color: blue;
+}
+
+
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -178,6 +194,7 @@ margin-top: 50px;
 .AssideCenterFooterFooterSpanThree {
   margin-left: 50px;
 }
+
 
 
 /* responsiv dizayn burada baslayir */

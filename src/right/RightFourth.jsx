@@ -1,6 +1,12 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+
 function RightFourth() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // status tipi üçün yeni state dəyişəni
+
   const items = [
     {
       path: "/topstories",
@@ -8,6 +14,36 @@ function RightFourth() {
       placeholder: "Enter Email",
     },
   ];
+
+  const handleSubmit = async () => {
+    if (!email) {
+      setStatus("Please enter a valid email address.");
+      setStatusType("error"); // xəta mesajı tipini təyin edin
+      return;
+    }
+
+    try {
+      const response = await fetch("YOUR_API_ENDPOINT", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus("Thank you for subscribing!");
+        setStatusType("success"); // uğur mesajı tipini təyin edin
+      } else {
+        setStatus("Subscription failed. Please try again later.");
+        setStatusType("error"); // xəta mesajı tipini təyin edin
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setStatus("An error occurred. Please try again later.");
+      setStatusType("error"); // xəta mesajı tipini təyin edin
+    }
+  };
 
   return (
     <div className="mt-10">
@@ -17,10 +53,7 @@ function RightFourth() {
           className="mt-15 bg-white p-5 rounded-lg shadow-md"
           key={index}
         >
-          <NavLink
-            className="text-black no-underline flex flex-col items-center"
-            to={item.path}
-          >
+          <div className="text-black no-underline flex flex-col items-center">
             <span
               style={{ fontSize: "16px" }}
               className="text-sm mb-4 block font-medium"
@@ -28,14 +61,31 @@ function RightFourth() {
               {item.span}
             </span>
             <input
-              className="w-60 mt-5 h-7 p-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
-              type="text"
+              className="w-60  h-7 p-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
+              type="email"
               placeholder={item.placeholder}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button className="w-60 mt-8 h-7 bg-blue-500 text-white border border-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:border-blue-500">
+            <button
+              className="w-60 mt-5 h-7 bg-blue-500 text-white border border-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:border-blue-500"
+              type="button"
+              onClick={handleSubmit}
+            >
               Subscribe
             </button>
-          </NavLink>
+            {status && (
+              <p
+                className={`mt-4 text-sm ${
+                  statusType === "success"
+                    ? "success-message"
+                    : "error-message"
+                }`}
+              >
+                {status}
+              </p>
+            )}
+          </div>
         </div>
       ))}
     </div>

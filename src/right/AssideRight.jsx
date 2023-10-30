@@ -19,11 +19,11 @@ function AssideRight() {
           <CgProfile />
         </i>
         <span className="absolute top-0 left-0 text-sm md:text-base lg:text-lg ml-9">
-          My Profile
+        <HomePage />
         </span>
       </div>
 
-      {showHomePage && <HomePage />}
+      {/* {showHomePage && <HomePage />} */}
 
       <Weather />
 

@@ -10,7 +10,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <button  className="fade-in ml-20" onClick={handleLogout}>Çıkış Yap</button>
+      <button  className="fade-in " onClick={handleLogout}>Log Out</button>
     </div>
   );
 };
