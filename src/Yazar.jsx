@@ -31,6 +31,15 @@ function Yazar() {
     fetchAuthorNews();
   }, [slug]);
 
+  const shareOnFacebook = (news) => {
+
+    const postUrl = `https://aghazadehnews.netlify.app//news/${news.slug}`;
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      postUrl
+    )}&quote=${encodeURIComponent(news.title)}`;
+    window.open(fbShareUrl, "newwindow", "width=600,height=450");
+  };
+
   return (
     <div style={{ width: "800px" }} className="DisplayPostMarginLeft mt-6 ml-20">
       <div className="DisplayPostFlexTwo flex items-center mb-6">
@@ -80,27 +89,29 @@ function Yazar() {
                   className="w-24 h-24 md:w-28 md:h-28 rounded shadow"
                   alt="News Thumbnail"
                 />
-                <div className="DisplayPostWidthSix flex items-center space-x-2 text-lg mt-5">
-                  <span
-                    style={{ color: "brown" }}
-                    className="text-lg cursor-pointer text-brown"
-                  >
-                    <GoShare />
-                  </span>
-                  <span style={{ color: "blue" }} className="DisplayPostWidthFour text-sm text-blue">
-                    Share
-                  </span>
-                  <NavLink
-                    style={{ color: "brown" }}
-                    className="text-lg text-brown"
-                    to={`/news/${news?.slug}`}
-                  >
-                    <AiFillRead />
-                  </NavLink>
-                  <span style={{ color: "blue" }} className="DisplayPostWidthFive text-sm text-blue">
-                    Read later
-                  </span>
-                </div>
+                <div className="DisplayPostWidthThree flex items-center space-x-2 text-lg mt-5">
+                <span
+                  style={{ color: "brown" }}
+                  className="text-lg cursor-pointer"
+                  onClick={() => shareOnFacebook(news)}
+                >
+                  <GoShare />
+                </span>
+
+                <span onClick={() => shareOnFacebook(news)}   style={{ color: "blue" }} className="DisplaynewsWidthFour cursor-pointer text-sm ">
+                  Share
+                </span>
+                <NavLink
+                  style={{ color: "brown" }}
+                  className="text-lg"
+                  to={`/news/${news.slug}`}
+                >
+                  <AiFillRead />
+                </NavLink>
+                <NavLink to={`/news/${news.slug}`} style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
+                Read later
+                </NavLink>
+              </div>
               </div>
             </div>
           </div>

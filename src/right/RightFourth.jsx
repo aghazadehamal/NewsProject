@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function RightFourth() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
-  const [statusType, setStatusType] = useState(""); // status tipi üçün yeni state dəyişəni
+  const [statusType, setStatusType] = useState(""); 
 
   const items = [
     {
@@ -18,7 +18,7 @@ function RightFourth() {
   const handleSubmit = async () => {
     if (!email) {
       setStatus("Please enter a valid email address.");
-      setStatusType("error"); // xəta mesajı tipini təyin edin
+      setStatusType("error"); 
       return;
     }
 
@@ -33,20 +33,20 @@ function RightFourth() {
 
       if (response.ok) {
         setStatus("Thank you for subscribing!");
-        setStatusType("success"); // uğur mesajı tipini təyin edin
+        setStatusType("success"); 
       } else {
         setStatus("Subscription failed. Please try again later.");
-        setStatusType("error"); // xəta mesajı tipini təyin edin
+        setStatusType("error"); 
       }
     } catch (error) {
       console.error("Subscription error:", error);
       setStatus("An error occurred. Please try again later.");
-      setStatusType("error"); // xəta mesajı tipini təyin edin
+      setStatusType("error"); 
     }
   };
 
   return (
-    <div className="mt-10">
+    <div className="mt-6">
       {items?.map((item, index) => (
         <div
           style={{ height: "189px" }}

@@ -48,7 +48,7 @@ function RightThird() {
   return (
     <div
       style={{ height: "189px" }}
-      className="w-65 h-48 relative bg-white p-5 mt-9 rounded shadow-lg"
+      className="w-65 h-48 relative bg-white p-5 mt-7 rounded shadow-lg"
     >
       <Slider {...sliderSettings}>
         {sliderItems?.map((item, index) => (

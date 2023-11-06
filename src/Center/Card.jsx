@@ -8,25 +8,14 @@ function Card({ news, navigate, index }) {
     const date = new Date(apiDate);
     return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
   }
-  function shareOnFacebook(news) {
-    const url = window.location.href;
-    try {
-      new URL(url);
-    } catch (e) {
-      console.error("Invalid URL:", url);
-      return;
-    }
+  const shareOnFacebook = (post) => {
 
-  
-    
-
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(
-      url
-    )}&quote=${encodeURI(news.description)}`;
-    console.log("Sharing URL:", shareUrl);
-
-    window.open(shareUrl, "_blank");
-  }
+    const postUrl = `https://aghazadehnews.netlify.app//news/${post.slug}`;
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      postUrl
+    )}&quote=${encodeURIComponent(post.title)}`;
+    window.open(fbShareUrl, "newwindow", "width=600,height=450");
+  };
 
   return (
     <div className="card mb-6" key={index}>
