@@ -41,7 +41,7 @@ const Login = () => {
           onClick={handleLogin}
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         >
-          Giriş Yap
+          Giriş 
         </button>
       </div>
     </div>
