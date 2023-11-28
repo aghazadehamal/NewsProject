@@ -128,7 +128,7 @@ const DisplayPost = () => {
                   <AiFillRead />
                 </NavLink>
                 <NavLink to={`/news/${post.slug}`} style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
-                Read later
+                Read 
                 </NavLink>
               </div>
             </div>

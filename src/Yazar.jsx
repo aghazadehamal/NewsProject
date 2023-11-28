@@ -109,7 +109,7 @@ function Yazar() {
                   <AiFillRead />
                 </NavLink>
                 <NavLink to={`/news/${news.slug}`} style={{ color: "blue" }} className="DisplayPostWidthFive text-sm">
-                Read later
+                Read 
                 </NavLink>
               </div>
               </div>

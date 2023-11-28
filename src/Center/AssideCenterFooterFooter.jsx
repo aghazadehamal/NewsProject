@@ -6,7 +6,7 @@ function AssideCenterFooterFooter() {
             <span className="AssideCenterFooterFooterIcon self-center">
                 <TbCircleLetterC/>
             </span>
-            <span  className="AssideCenterFooterFooterSpanOne w-60 md:w-auto self-center">Aster News, 2022</span>
+            <span  className="AssideCenterFooterFooterSpanOne w-60 md:w-auto self-center">Aster News, 2023</span>
             <span className="AssideCenterFooterFooterSpanTwo self-center">Privacy Policy</span>
             <span className="AssideCenterFooterFooterSpanThree self-center">Terms of Service</span>
         </div>
