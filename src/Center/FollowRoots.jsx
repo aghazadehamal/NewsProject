@@ -11,6 +11,7 @@ function FollowRoots() {
   const [following, setFollowing] = useState({});
   const [slidesPerView, setSlidesPerView] = useState(2);
   const swiperRef = useRef(null);
+  const [news, setNews] = useState([])
 
   const [newsData, setNewsData] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -20,7 +21,7 @@ function FollowRoots() {
   const fetchNews = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://all-api.bitcode.az/api/author");
+      const res = await axios.get("https://all-api.bitcode.az/api/authors");
       setNewsData(res.data.data);
       setFiltered(res.data.data);
     } catch (error) {

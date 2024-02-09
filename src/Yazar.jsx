@@ -17,7 +17,7 @@ function Yazar() {
         setLoading(true);
 
         const response = await axios.get(
-          `https://all-api.bitcode.az/api/news?authorSlug=${slug}`
+          `https://all-api.bitcode.az/api/news?authorsSlug=${slug}`
         );
         setAuthorNews(response.data);
       } catch (error) {
@@ -27,6 +27,10 @@ function Yazar() {
         setLoading(false);
       }
     };
+
+  
+  
+    
 
     fetchAuthorNews();
   }, [slug]);
@@ -39,6 +43,10 @@ function Yazar() {
     )}&quote=${encodeURIComponent(news.title)}`;
     window.open(fbShareUrl, "newwindow", "width=600,height=450");
   };
+
+
+
+ 
 
   return (
     <div style={{ width: "800px" }} className="DisplayPostMarginLeft mt-6 ml-20">
@@ -76,6 +84,7 @@ function Yazar() {
                 <p className="text-sm md:text-base text-blue-800 mb-2 overflow-hidden line-clamp-2 flex-grow">
                   {news?.description}
                 </p>
+
                 <p className="text-sm text-blue-800 mb-2 overflow-hidden line-clamp-1">
                   {news?.category?.name}
                 </p>
